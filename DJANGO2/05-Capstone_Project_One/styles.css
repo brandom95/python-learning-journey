@@ -1,0 +1,36 @@
+html{
+    background-color: #2EC4B6
+}
+body{
+    text-align: center;
+    background-color: #011627;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+}
+h1{
+    color: white;
+}
+h2{
+    color: white;
+    padding-bottom: 50px;
+}
+h3{
+    color: white;
+    padding-bottom: 30px;
+}
+div p{
+    color: white;
+    padding: 10px 200px 20px 200px;
+}
+
+form input{
+    padding-top: 0px;
+}
+
+form p{
+    color: white;
+    margin-bottom: 0px;
+}
+
