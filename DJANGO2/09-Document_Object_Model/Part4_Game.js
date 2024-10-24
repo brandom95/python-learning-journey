@@ -1,3 +1,4 @@
+/*
 // Restart Game Button
 var restart = document.querySelector('#b');
 
@@ -33,3 +34,33 @@ function changeMarker(){
 for (var i = 0; i < squares.length; i++) {
     squares[i].addEventListener('click', changeMarker);
 }
+
+*/
+
+var reset = document.getElementById("b");
+
+function refreshing (){
+    window.location.reload();
+}
+reset.addEventListener("click", refreshing)
+
+// user turn 1
+var userTurn = document.querySelectorAll("td");
+for(var i = 0; i < userTurn.length; i++) {
+    userTurn[i].addEventListener("click", function() {
+    this.textContent = "X";
+    })
+
+    userTurn[i].addEventListener("dblclick", function() {
+    this.textContent = "O";
+    })
+
+
+}
+
+
+
+
+
+
+

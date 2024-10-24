@@ -1,3 +1,5 @@
+
+
 // We need to use jQuery for the following:
 
 var player1 = prompt("Player One: Enter Your Name , you will be Blue");
@@ -168,3 +170,5 @@ $('.board button').on('click',function() {
 //     $(this).css('background-color','rgb(51, 51, 51)');
 //   }
 // });
+
+

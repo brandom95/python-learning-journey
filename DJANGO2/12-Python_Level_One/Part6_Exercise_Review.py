@@ -13,6 +13,8 @@
 s = 'django'
 
 # Use indexing to print out the following:
+
+
 # 'd'
 
 # 'o'
@@ -54,6 +56,7 @@ d3 = {'k1':[{'nest_key':['this is deep',['hello']]}]}
 
 # Use a set to find the unique values of the list below:
 mylist = [1,1,1,1,1,2,2,2,2,3,3,3,3]
+
 
 
 ###############

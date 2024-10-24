@@ -14,6 +14,9 @@
 //
 // Write a function called sleepIn that takes in two boolean parameters: weekday
 // and vacation.
+
+
+
 //
 // The parameter weekday is true if it is a weekday, and the parameter vacation is
 // true if we are on vacation. We sleep in if it is not a weekday or
@@ -24,9 +27,15 @@
 // sleepIn(false, true) → true
 
 function sleepIn(weekday, vacation) {
-    //Code Goes Here
+    if (!weekday && !vacation) {
+        return true;
+    } else if ( weekday && !vacation ) {
+        return false;
+    } else if ( !weekday && vacation ) {
+        return true;
+    }
 }
-
+sleepIn(false, false)
 
 //
 // PROBLEM 2: MONKEY TROUBLE
@@ -42,7 +51,13 @@ function sleepIn(weekday, vacation) {
 // monkeyTrouble(true, false) → false
 
 function monkeyTrouble(aSmile, bSmile) {
-    //Code Goes Here
+    if(aSmile && bSmile) {
+        return true;
+    } else if (!aSmile && !bSmile) {
+        return true;
+    } else if (!aSmile && bSmile || aSmile && !bSmile) {
+        return false;
+    }
 }
 
 
@@ -59,7 +74,13 @@ function monkeyTrouble(aSmile, bSmile) {
 // stringTimes("Hi", 1) → "Hi"
 
 function stringTimes(str, n) {
-    //Code Goes Here
+  var x ='';
+    for( i = 1; i < n; i++ ) {
+
+        x += str;
+
+    }
+    return x;
 }
 
 // PROBLEM 4: LUCKY SUM
@@ -77,8 +98,12 @@ function stringTimes(str, n) {
 // luckySum(1, 13, 3) → 1
 
 function luckySum(a, b, c){
-
-  //Code Goes Here
+    if (b === 13){
+        return a+c
+    }
+    else if (b !== 13){
+        return a+b+c
+    }
 }
 
 // PROBLEM 5:
@@ -96,7 +121,18 @@ function luckySum(a, b, c){
 // caught_speeding(65, true) → 0
 
 function caught_speeding(speed, is_birthday){
-  //Code Goes Here
+  if(is_birthday){
+      return 1;
+  } else{
+      if(speed > 61 && speed < 80){
+          return 1;
+      } else if(speed > 81 ){
+          return 2;
+
+      }else{
+          return 0;
+      }
+  }
 }
 
 
@@ -114,5 +150,10 @@ function caught_speeding(speed, is_birthday){
 // makeBricks(3, 2, 10) → true
 
 function makeBricks(small, big, goal){
-  //Code Goes Here
+  var x = small + (big * 5);
+  if (x >= goal) {
+      return true;
+  }else{
+      return false;
+  }
 }
