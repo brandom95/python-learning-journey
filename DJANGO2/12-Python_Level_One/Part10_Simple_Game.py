@@ -70,7 +70,7 @@ while not status:
         print("All the digits are wrong!")
         countTry()
 
-#finish finally ye
+#finish finally ye? testing
 
 
 # Think about how you will compare the input to the random number, what format
