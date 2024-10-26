@@ -1,6 +1,7 @@
 #####################################
 #### PART 9: FUNCTION EXERCISES #####
 #####################################
+from operator import truediv
 
 
 # Complete the tasks below by writing functions! Keep in mind, these can be
@@ -41,16 +42,16 @@
 # stringBits('Hi') → 'H'
 # stringBits('Heeololeo') → 'Hello'
 
-def stringBits(str):
-    newList = []
-    for i in range(len(str)):
-        if i % 2 == 0:
-            newList.append(str[i])
-
-    return newList
-
-
-print(stringBits('Heeololeo'))
+#def stringBits(str):
+#    newList = []
+#    for i in range(len(str)):
+#        if i % 2 == 0:
+#            newList.append(str[i])
+#
+#    return newList
+#
+#
+#print(stringBits('Heeololeo'))
 
 #####################
 ## -- PROBLEM 3 -- ##
@@ -62,7 +63,7 @@ print(stringBits('Heeololeo'))
 #
 # Note: s.lower() returns the lowercase version of a string.
 #
-# Examples:
+# Examples: 123456789 - 789
 #
 # end_other('Hiabc', 'abc') → True
 # end_other('AbC', 'HiaBc') → True
@@ -70,7 +71,16 @@ print(stringBits('Heeololeo'))
 
 
 #def end_other(a, b):
-  # CODE GOES HERE
+#    a = a.lower()
+#    b= b.lower()
+#    verif1= len(a) - len(b)
+#    verif2 = len(b) - len(a)
+#    if a[verif1:] == b or b[verif2:] == a:
+#        return True
+#    else:
+#        return False
+#
+#print(end_other('aBcs', 'hiabC'))
 
 #####################
 ## -- PROBLEM 4 -- ##
@@ -84,7 +94,13 @@ print(stringBits('Heeololeo'))
 # doubleChar('Hi-There') → 'HHii--TThheerree'
 
 #def doubleChar(str):
-  # CODE GOES HERE
+#  temp = ""
+#  for i in str:
+#      temp += i + i
+#
+#  return temp
+#
+#print(doubleChar('The'))
 
 
 #####################
@@ -109,9 +125,19 @@ print(stringBits('Heeololeo'))
 # no_teen_sum(2, 1, 14) → 3
 
 #def no_teen_sum(a, b, c):
-  # CODE GOES HERE
+#    sum1= fix_teen(a) + fix_teen(b) + fix_teen(c)
+#    return sum1
+#
 #def fix_teen(n):
-  # CODE GOES HERE
+#    x = range(13, 20)
+#    for i in x:
+#        if n == 15 or n==16:
+#            n = n
+#        elif n == i:
+#            n=0
+#    return n
+#print(no_teen_sum(2,1,19))
+
 
 #####################
 ## -- PROBLEM 6 -- ##
@@ -125,5 +151,14 @@ print(stringBits('Heeololeo'))
 # count_evens([2, 2, 0]) → 3
 # count_evens([1, 3, 5]) → 0
 
-#def count_evens(nums):
-  # CODE GOES HERE
+def count_evens(nums):
+    counter= 0
+
+    for i in nums:
+        if i % 2 == 0:
+            counter = counter +1
+        else:
+            counter = counter + 0
+    return counter
+
+print(count_evens([2, 1, 5]))
